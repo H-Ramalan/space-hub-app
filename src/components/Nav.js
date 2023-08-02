@@ -14,7 +14,7 @@ const Nav = () => (
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) => (isActive ? 'underline font-bold' : '')}
+              className={({ isActive }) => (isActive ? 'underline font-bold' : null)}
             >
               Rockets
             </NavLink>

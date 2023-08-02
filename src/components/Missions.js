@@ -76,7 +76,7 @@ const Missions = () => {
                         : 'border-slate-500 text-slate-500'
                     } px-2 py-1 capitalize whitespace-nowrap rounded-md font-semibold border-2`}
                   >
-                    {i.joined_mission ? 'active member' : 'not a member'}
+                    {i.joined_mission ? 'leave mission' : 'join mission'}
                   </button>
                 </td>
               </tr>

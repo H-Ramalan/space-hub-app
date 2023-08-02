@@ -40,7 +40,7 @@ const Missions = () => {
             <th className="border-2 text-left py-2 px-2">Mission</th>
             <th className="border-2 text-left py-2 px-2">Description</th>
             <th className="border-2 text-left py-2 px-2">Status</th>
-            <th className="border-2 text-left py-2 px-2" />
+            <th className="border-2 text-left py-2 px-2 text-transparent">Action</th>
           </tr>
         </thead>
         <tbody className="mission-table-body">

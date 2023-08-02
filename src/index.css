@@ -3,5 +3,5 @@
 @import 'tailwindcss/utilities';
 
 .mission-table-body tr:nth-child(odd) {
-   background-color: rgba(192, 197, 201, 0.671);
+  background-color: rgba(192, 197, 201, 0.671);
 }

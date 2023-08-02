@@ -1,7 +1,6 @@
-import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
-import Logo from "./SpaceLogo";
-import "./styles/Nav.css";
+import React from 'react';
+import { NavLink, Outlet } from 'react-router-dom';
+import './styles/Nav.css';
 
 const Nav = () => (
   <div className="w-full h-screen overflow-y-auto overflow-x-hidden">
@@ -15,9 +14,7 @@ const Nav = () => (
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) =>
-                isActive ? "underline font-bold" : ""
-              }
+              className={({ isActive }) => (isActive ? 'underline font-bold' : '')}
             >
               Rockets
             </NavLink>
@@ -25,9 +22,7 @@ const Nav = () => (
           <li className="">
             <NavLink
               to="/Missions"
-              className={({ isActive }) =>
-                isActive ? "underline font-bold" : ""
-              }
+              className={({ isActive }) => (isActive ? 'underline font-bold' : '')}
             >
               Missions
             </NavLink>
@@ -35,9 +30,7 @@ const Nav = () => (
           <li>
             <NavLink
               to="/MyProfile"
-              className={({ isActive }) =>
-                isActive ? "underline font-bold" : ""
-              }
+              className={({ isActive }) => (isActive ? 'underline font-bold' : '')}
             >
               My Profile
             </NavLink>

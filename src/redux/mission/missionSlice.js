@@ -1,11 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {};
 
 const missionSlice = createSlice({
-  name: "mission",
+  name: 'mission',
   initialState,
   reducers: {},
 });
 
-export const missionReducer = missionSlice.reducer;
+const missionReducer = missionSlice.reducer;
+export default missionReducer;

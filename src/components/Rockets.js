@@ -1,5 +1,5 @@
 const Rockets = () => (
-  <div className='w-full'>
+  <div className="w-full">
     <h1>Rockets</h1>
   </div>
 );

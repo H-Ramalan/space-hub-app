@@ -1,15 +1,15 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
-const url = 'https://api.spacexdata.com/v3/rockets';
+const url = "https://api.spacexdata.com/v3/rockets";
 
 const initialState = {
   rocket: [],
-  error: '',
+  error: "",
   isLoading: false,
 };
 
-const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
+const fetchRockets = createAsyncThunk("rockets/fetchRockets", async () => {
   try {
     const response = await axios.get(url);
     const { data } = response;
@@ -20,26 +20,27 @@ const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
 });
 
 const rocketsSlice = createSlice({
-  name: 'rocket',
+  name: "rocket",
   initialState,
   reducers: {
     reserveRocket: (state, action) => {
       const newState = state.rocket.map((rocket) => {
         if (rocket.id === action.payload) {
+          console.log('kk')
           return { ...rocket, reserved: true };
         }
         return rocket;
       });
-      return { ...state, data: newState };
+      return { ...state, rocket: newState };
     },
     cancelReserve: (state, action) => {
-      const newState = state.data.map((rocket) => {
+      const newState = state.rocket.map((rocket) => {
         if (rocket.id === action.payload) {
           return { ...rocket, reserved: false };
         }
         return rocket;
       });
-      return { ...state, data: newState };
+      return { ...state, rocket: newState };
     },
   },
   extraReducers: (builder) => {

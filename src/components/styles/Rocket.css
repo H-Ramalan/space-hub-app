@@ -37,3 +37,10 @@
   line-height: 25px;
   font-size: 20px;
 }
+
+.reserved {
+  width: 7%;
+  background: blue;
+  color: white;
+  padding: 5px;
+}

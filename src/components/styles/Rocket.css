@@ -25,7 +25,6 @@
 
 .rocket-btn {
   margin: 3% 0;
-  border: none;
   background: blue;
   padding: 10px;
   border-radius: 4px;
@@ -36,4 +35,11 @@
 .rocket-note {
   line-height: 25px;
   font-size: 20px;
+}
+
+.reserved {
+  width: 7%;
+  background: blue;
+  color: white;
+  padding: 5px;
 }

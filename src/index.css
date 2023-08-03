@@ -1,3 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.mission-table-body tr:nth-child(odd) {
+  background-color: rgba(192, 197, 201, 0.671);
+}

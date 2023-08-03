@@ -4,7 +4,7 @@ import './styles/Nav.css';
 
 const Nav = () => (
   <div className="w-full h-screen overflow-y-auto overflow-x-hidden">
-    <div className="nav-container w-full px-2 lg:px-10 shadow-md">
+    <div className="nav-container w-full px-2 lg:px-10 shadow-md sticky top-0 bg-white z-50">
       <nav className="w-full nav-bar h-[1.5cm] flex flex-row items-center justify-between ">
         <div className="nav header flex flex-row gap-2">
           <img src="" alt="logo" />
@@ -14,7 +14,7 @@ const Nav = () => (
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) => (isActive ? 'underline font-bold' : '')}
+              className={({ isActive }) => (isActive ? 'underline font-bold' : null)}
             >
               Rockets
             </NavLink>

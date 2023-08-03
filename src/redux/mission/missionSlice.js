@@ -75,14 +75,8 @@ export default missionReducer;
 // actions
 export const joinAMission = (index, id) => async (dispatch) => {
   dispatch(joinMission(index));
-  const joinedMissions = JSON.parse(localStorage.getItem('joined_missions')) || [];
-  joinedMissions.push(id);
-  localStorage.setItem('joined_missions', JSON.stringify(joinedMissions));
 };
 
 export const leaveAMission = (index, id) => async (dispatch) => {
   dispatch(leaveMission(index));
-  const joinedMissions = JSON.parse(localStorage.getItem('joined_missions')) || [];
-  const newState = joinedMissions.filter((i) => i !== id);
-  localStorage.setItem('joined_missions', JSON.stringify(newState));
 };

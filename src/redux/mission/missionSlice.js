@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import transformMissionData from '../../helpers/transformMissionData';
+import transformMissionData from '../../helpers/transformData';
 
 export const getMissions = createAsyncThunk('mission/getMission', async () => {
   try {

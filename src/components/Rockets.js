@@ -1,11 +1,11 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   fetchRockets,
   reserveRocket,
   cancelReserve,
-} from "../redux/rocket/rocketSlice";
-import "./styles/Rocket.css";
+} from '../redux/rocket/rocketSlice';
+import './styles/Rocket.css';
 
 const Rockets = () => {
   const rocket = useSelector((state) => state.rocket.rocket);
@@ -28,7 +28,7 @@ const Rockets = () => {
         <div className="rocket" key={rocket.id}>
           <img
             src={rocket.flickr_images[0]}
-            alt={rocket.name}
+            alt={rocket.rocket_name}
             className="rocket-img"
           />
           <div className="rocket-info">

@@ -1,11 +1,11 @@
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
 const MyProfile = () => {
   const { missions } = useSelector((state) => state.mission);
   const joinedMissions = missions.filter((i) => i.joined_mission === true);
   const { rocket } = useSelector((state) => state.rocket);
   const reservedRocket = rocket.filter(
-    (i) => i.reserved && i.reserved === true
+    (i) => i.reserved && i.reserved === true,
   );
   return (
     <div className="w-full mt-10 px-2 lg:px-10 flex flex-row flex-wrap justify-center gap-2">

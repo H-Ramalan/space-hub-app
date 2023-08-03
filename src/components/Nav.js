@@ -1,13 +1,14 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import './styles/Nav.css';
+import logo from './assets/planet.png';
 
 const Nav = () => (
   <div className="w-full h-screen overflow-y-auto overflow-x-hidden">
     <div className="nav-container w-full px-2 lg:px-10 shadow-md">
       <nav className="w-full nav-bar h-[1.5cm] flex flex-row items-center justify-between ">
         <div className="nav header flex flex-row gap-2">
-          <img src="" alt="logo" />
+          <img src={logo} alt="logo" className="logo" />
           <h1>Space Travellers&apos;s Hub</h1>
         </div>
         <ul className="nav-links text-blue-600 flex flex-row gap-3 text-[17px]">

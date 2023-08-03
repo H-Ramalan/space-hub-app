@@ -16,3 +16,9 @@
 .nav-links {
   display: flex;
 }
+
+h1 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 15px;
+}

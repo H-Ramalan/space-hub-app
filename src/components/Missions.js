@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { joinAMission, leaveAMission } from '../redux/mission/missionSlice';
+import { joinAMission, leaveMission } from '../redux/mission/missionSlice';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -21,8 +21,7 @@ const Missions = () => {
     return (
       <>
         <h1>
-          Opps! Error occured:
-          {error}
+          Opps! Error occured: {error}
         </h1>
       </>
     );
@@ -30,6 +29,10 @@ const Missions = () => {
 
   const handleJoinMission = (index, id) => {
     dispatch(joinAMission(index, id));
+  };
+
+  const handleLeaveMission = (index, id) => {
+    dispatch(leaveMission(index, id));
   };
 
   return (
@@ -65,7 +68,7 @@ const Missions = () => {
                     type="button"
                     onClick={() => {
                       if (i.joined_mission) {
-                        dispatch(leaveAMission(index, i.mission_id));
+                        handleLeaveMission(index, i.mission_id)
                       } else {
                         handleJoinMission(index, i.mission_id);
                       }

@@ -19,7 +19,7 @@ const Rockets = () => {
       {rocket.map((rocket) => (
         <div className="rocket" key={rocket.id}>
           <img
-            src={rocket.image_url}
+            src={rocket.flickr_images[0]}
             alt={rocket.rocket_name}
             className="rocket-img"
           />

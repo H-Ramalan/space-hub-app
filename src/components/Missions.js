@@ -21,7 +21,9 @@ const Missions = () => {
     return (
       <>
         <h1>
-          Opps! Error occured: {error}
+          Opps! Error occured:
+          {' '}
+          {error}
         </h1>
       </>
     );
@@ -68,7 +70,7 @@ const Missions = () => {
                     type="button"
                     onClick={() => {
                       if (i.joined_mission) {
-                        handleLeaveMission(index, i.mission_id)
+                        handleLeaveMission(index, i.mission_id);
                       } else {
                         handleJoinMission(index, i.mission_id);
                       }

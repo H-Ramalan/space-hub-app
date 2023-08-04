@@ -5,7 +5,6 @@ import configureStore from 'redux-mock-store';
 import Missions from '../Missions';
 import '@testing-library/jest-dom/extend-expect';
 
-
 describe('Missions component', () => {
   const mockStore = configureStore();
 
@@ -36,7 +35,7 @@ describe('Missions component', () => {
     render(
       <Provider store={store}>
         <Missions />
-      </Provider>
+      </Provider>,
     );
 
     expect(screen.getByText('LOADING...')).toBeInTheDocument();
@@ -46,18 +45,15 @@ describe('Missions component', () => {
     const errorMessage = 'Some error message';
     const errorState = { ...initialState.mission, isError: true, error: errorMessage };
     const store = mockStore({ mission: errorState });
-  
+
     render(
       <Provider store={store}>
         <Missions />
-      </Provider>
+      </Provider>,
     );
-  
-    expect(screen.getByText('Opps! Error occured: Some error message')).toBeInTheDocument();
 
+    expect(screen.getByText('Opps! Error occured: Some error message')).toBeInTheDocument();
   });
-  
-  
 
   test('renders mission data when isLoading and isError are false', () => {
     const missionDataState = { ...initialState.mission };
@@ -66,7 +62,7 @@ describe('Missions component', () => {
     const { getByText, getByRole } = render(
       <Provider store={store}>
         <Missions />
-      </Provider>
+      </Provider>,
     );
 
     // Check if mission data is displayed correctly

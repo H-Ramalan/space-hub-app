@@ -73,10 +73,10 @@ const missionReducer = missionSlice.reducer;
 export default missionReducer;
 
 // actions
-export const joinAMission = (index, id) => async (dispatch) => {
+export const joinAMission = (index) => async (dispatch) => {
   dispatch(joinMission(index));
 };
 
-export const leaveAMission = (index, id) => async (dispatch) => {
+export const leaveAMission = (index) => async (dispatch) => {
   dispatch(leaveMission(index));
 };

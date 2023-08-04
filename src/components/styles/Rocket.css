@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.rocket {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+}
+
+.rocket-img {
+  width: 20%;
+}
+
+.rocket-box {
+  margin: 15px;
+}
+
+.rocket-name {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.rocket-btn {
+  margin: 3% 0;
+  background: blue;
+  padding: 10px;
+  border-radius: 4px;
+  color: black;
+  font-weight: 500;
+}
+
+.rocket-note {
+  line-height: 25px;
+  font-size: 20px;
+}
+
+.reserved {
+  width: 7%;
+  background: blue;
+  color: white;
+  padding: 5px;
+}

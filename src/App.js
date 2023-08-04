@@ -7,11 +7,13 @@ import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
 import './index.css';
 import { getMissions } from './redux/mission/missionSlice';
+import { fetchRockets } from './redux/rocket/rocketSlice';
 
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getMissions());
+    dispatch(fetchRockets());
   }, [dispatch]);
   return (
     <BrowserRouter>

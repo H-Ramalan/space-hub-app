@@ -1,18 +1,10 @@
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  fetchRockets,
-  reserveRocket,
-  cancelReserve,
-} from '../redux/rocket/rocketSlice';
+import { reserveRocket, cancelReserve } from '../redux/rocket/rocketSlice';
 import './styles/Rocket.css';
 
 const Rockets = () => {
   const rocket = useSelector((state) => state.rocket.rocket);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
 
   const reserveRocketHandler = (rocketId) => {
     dispatch(reserveRocket(rocketId));
@@ -27,7 +19,7 @@ const Rockets = () => {
       {rocket.map((rocket) => (
         <div className="rocket" key={rocket.id}>
           <img
-            src={rocket.flickr_images[0]}
+            src={rocket.image_url}
             alt={rocket.rocket_name}
             className="rocket-img"
           />

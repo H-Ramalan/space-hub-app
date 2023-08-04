@@ -36,8 +36,8 @@ const MyProfile = () => {
             </>
           ) : (
             reservedRocket.map((i) => (
-              <div className="bg-white py-3 px-4 col-span-1" key={i.mission_id}>
-                {i.mission_name}
+              <div className="bg-white py-3 px-4 col-span-1" key={i.id}>
+                {i.rocket_name}
               </div>
             ))
           )}
